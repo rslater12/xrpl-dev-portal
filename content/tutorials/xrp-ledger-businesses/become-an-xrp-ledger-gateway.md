@@ -1,14 +1,14 @@
 ---
 html: become-an-xrp-ledger-gateway.html
 parent: xrp-ledger-businesses.html
-blurb: Gateways are the businesses that link the XRP Ledger to the rest of the world. This tutorial demonstrates how an existing online financial institution can expand to act as a gateway in the the XRP Ledger.
+blurb: Gateways are the businesses that link the XRP Ledger to the rest of the world. This tutorial demonstrates how an existing online financial institution can expand to act as a gateway in the XRP Ledger.
 labels:
   - Tokens
   - Security
 ---
 # Become an XRP Ledger Gateway
 
-**Gateways** are the businesses that link the XRP Ledger to the rest of the world. An existing online financial institution can expand to act as a gateway in the the XRP Ledger. By becoming an XRP Ledger gateway, a financial services business can gain several advantages:
+**Gateways** are the businesses that link the XRP Ledger to the rest of the world. An existing online financial institution can expand to act as a gateway in the XRP Ledger. By becoming an XRP Ledger gateway, a financial services business can gain several advantages:
 
 * By enabling its customers to send and receive value in the XRP Ledger, the business increases its value proposition to customers.
 * By accepting payments from the XRP Ledger, the business increases the number of ways that customers can fund accounts at its business, even internationally.
@@ -299,7 +299,7 @@ Processing payments to and from the XRP Ledger naturally comes with some risks, 
 - Protect yourself against reversible deposits. XRP Ledger payments are irreversible, but many electronic money systems like credit cards or PayPal are not. Scammers can abuse this to take their fiat money back by canceling a deposit after receiving issued currencies in the XRP Ledger.
 - When sending into the XRP Ledger, specify the issuing address as the issuer of the currency. Otherwise, you might accidentally use paths that deliver the same currency issued by other addresses.
 - Before sending a payment into the XRP Ledger, double check the cost of the payment. A payment from your operational address to a customer should not cost more than the destination amount plus any [transfer fee](#transfer-fees) you have set.
-- Before processing a payment out of Ripple, make sure you know the customer's identity. This makes it harder for anonymous attackers to scam you. Most anti-money-laundering regulations require this anyway. This is especially important because the users sending money from the XRP Ledger could be different than the ones that initially received the money in the XRP Ledger.
+- Before processing a payment out of the XRP Ledger, make sure you know the customer's identity. This makes it harder for anonymous attackers to scam you. Most anti-money-laundering regulations require this anyway. This is especially important because the users sending money from the XRP Ledger could be different than the ones that initially received the money in the XRP Ledger.
 - Follow the guidelines for [reliable transaction submission](#reliable-transaction-submission) when sending XRP Ledger transactions.
 - [Robustly monitor for incoming payments](#robustly-monitoring-for-payments), and read the correct amount. Don't mistakenly credit someone the full amount if they only sent a [partial payment](partial-payments.html).
 - Track your obligations and balances within the XRP Ledger, and compare with the assets in your collateral account. If they do not match up, stop processing withdrawals and deposits until you resolve the discrepancy.
@@ -309,11 +309,11 @@ Processing payments to and from the XRP Ledger naturally comes with some risks, 
     - Enable the [`RequireAuth` flag](#require-auth) on all operational addresses so they cannot issue currency by accident.
 - Monitor for suspicious or abusive behavior. For example, a user could repeatedly send funds into and out of the XRP Ledger, as a denial of service attack that effectively empties an operational address's balance. Suspend customers whose addresses are involved in suspicious behavior by not processing their XRP Ledger payments.
 
-## Trading on Ripple
+## Trading on the DEX
 
 After the issued currencies have been created in the XRP Ledger, they can be freely transferred and traded by XRP Ledger users. There are several consequences of this situation:
 
-- Anyone can buy/sell EUR.ACME on Ripple. If ACME issues multiple currencies on Ripple, a separate trust line is necessary for each.
+- Anyone can buy/sell EUR.ACME on the XRP Ledger. If ACME issues multiple currencies on the XRP Ledger, a separate trust line is necessary for each.
     - This includes XRP Ledger users who do not have an account in ACME Exchange's systems. To withdraw the funds successfully from ACME, users still have to register with ACME.
     - Optionally, ACME uses the [Authorized Trust Lines](#authorized-trust-lines) feature to limit who can hold EUR.ACME in the XRP Ledger.
     - If ACME determines that a customer has acted in bad faith, ACME can [Freeze](#freeze) that user's accounting relationships to ACME in the XRP Ledger, so that the user can no longer trade in the gateway's issued currencies.
